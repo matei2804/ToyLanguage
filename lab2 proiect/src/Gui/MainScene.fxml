@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="755.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.MainSceneController">
+   <children>
+      <VBox layoutX="3.0" prefHeight="704.0" prefWidth="780.0">
+         <children>
+            <HBox prefHeight="687.0" prefWidth="780.0">
+               <children>
+                  <VBox prefHeight="687.0" prefWidth="169.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="253.0" text="Number of programs:" />
+                        <Label prefHeight="118.0" prefWidth="61.0" text="Heap:" />
+                        <Label prefHeight="158.0" prefWidth="61.0" text="Out:" />
+                        <Label prefHeight="83.0" prefWidth="59.0" text="File Table:" />
+                        <Label prefHeight="138.0" prefWidth="101.0" text="Program State ID:" />
+                        <Label prefHeight="119.0" prefWidth="75.0" text="Symbol Table:" />
+                        <Label prefHeight="92.0" prefWidth="75.0" text="Stack:" />
+                        <Label prefHeight="97.0" prefWidth="63.0" text="Latch Table:" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="637.0" prefWidth="699.0">
+                     <children>
+                        <TextField fx:id="nrProgramsTextField" prefHeight="52.0" prefWidth="680.0" />
+                        <TableView fx:id="heapTableView" prefHeight="119.0" prefWidth="680.0">
+                          <columns>
+                            <TableColumn fx:id="heapAdress" prefWidth="362.0" text="Adress" />
+                            <TableColumn fx:id="heapValue" prefWidth="361.5" text="Value" />
+                          </columns>
+                        </TableView>
+                        <ListView fx:id="outListView" prefHeight="85.0" prefWidth="665.0" />
+                        <ListView fx:id="fileTableListView" prefHeight="97.0" prefWidth="680.0" />
+                        <ListView fx:id="programStateIDListView" prefHeight="105.0" prefWidth="655.0" />
+                        <TableView fx:id="symbolTableView" prefHeight="132.0" prefWidth="655.0">
+                          <columns>
+                            <TableColumn fx:id="symbolTableVarName" prefWidth="329.0" text="Variable Name" />
+                            <TableColumn fx:id="symbolTableValue" prefWidth="378.0" text="Value" />
+                          </columns>
+                        </TableView>
+                        <ListView fx:id="stackListView" prefHeight="78.0" prefWidth="655.0" />
+                        <TableView fx:id="latchTableView" prefHeight="84.0" prefWidth="655.0">
+                          <columns>
+                            <TableColumn fx:id="latchLocationColumn" prefWidth="316.0" text="Location" />
+                            <TableColumn fx:id="latchValueColumn" prefWidth="338.0" text="Value" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="runButton" layoutX="381.0" layoutY="698.0" mnemonicParsing="false" text="Run one step" />
+   </children>
+</AnchorPane>
